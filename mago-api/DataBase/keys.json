@@ -1,0 +1,42 @@
+{
+  "MAGO-MENU-DIARIA-ETW8G2NV-FVQWPEQX": {
+    "produto": "MENU",
+    "tipo": "DIARIA",
+    "status": "nao_ativada",
+    "ativada": false,
+    "discordId": null,
+    "hwid": null,
+    "criadaEm": 1781478585402,
+    "expiraEm": null
+  },
+  "MAGO-MENU-DIARIA-SPV5BO09-TTKS6H3C": {
+    "produto": "MENU",
+    "tipo": "DIARIA",
+    "status": "nao_ativada",
+    "ativada": false,
+    "discordId": null,
+    "hwid": null,
+    "criadaEm": 1782687100676,
+    "expiraEm": null
+  },
+  "MAGO-EXTERNAL-DIARIA-Q8BCALAQ-5GJRCUG7": {
+    "produto": "EXTERNAL",
+    "tipo": "DIARIA",
+    "status": "nao_ativada",
+    "ativada": false,
+    "discordId": null,
+    "hwid": null,
+    "criadaEm": 1782687118697,
+    "expiraEm": null
+  },
+  "MAGO-SPOOFER-DIARIA-5I4OCYJ4-OMCI9S7Q": {
+    "produto": "SPOOFER",
+    "tipo": "DIARIA",
+    "status": "nao_ativada",
+    "ativada": false,
+    "discordId": null,
+    "hwid": null,
+    "criadaEm": 1782687148232,
+    "expiraEm": null
+  }
+}
