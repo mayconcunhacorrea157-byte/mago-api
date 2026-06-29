@@ -266,6 +266,55 @@ app.post("/login", (req, res) => {
     }
 });
 
+app.post("/admin/add-key", (req, res) => {
+    try {
+        const { secret, key, produto, tipo } = req.body;
+
+        if (secret !== process.env.ADMIN_SECRET) {
+            return res.status(403).json({
+                success: false,
+                message: "Acesso negado."
+            });
+        }
+
+        if (!key || !produto || !tipo) {
+            return res.json({
+                success: false,
+                message: "Dados ausentes."
+            });
+        }
+
+        const banco = carregarJSON(keysPath);
+
+        banco[key] = {
+            produto: produto.toUpperCase(),
+            tipo: tipo.toUpperCase(),
+            status: "nao_ativada",
+            ativada: false,
+            discordId: null,
+            hwid: null,
+            criadaEm: Date.now(),
+            expiraEm: null
+        };
+
+        salvarJSON(keysPath, banco);
+
+        return res.json({
+            success: true,
+            message: "Key adicionada.",
+            key
+        });
+
+    } catch (err) {
+        console.error(err);
+
+        return res.status(500).json({
+            success: false,
+            message: "Erro interno."
+        });
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
